@@ -27,11 +27,10 @@ class ResultScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
     final numTotalQuestions = questions.length;
-    final numCorrectQuestions = summarizeData.where((data) {
-      return data['selected_answer'] == data['correct_answer'];
-    }).length;
+    final numCorrectQuestions = summarizeData
+        .where((data) => data['selected_answer'] == data['correct_answer'])
+        .length;
     return SizedBox(
       width: double.infinity,
       child: Container(
